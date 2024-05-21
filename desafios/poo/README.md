@@ -20,4 +20,30 @@ Com base no vídeo de lançamento do iPhone conforme link abaixo, elabore em uma
 * Navegador na Internet: exibirPagina, adicionarNovaAba, atualizarPagina
 
 
-
+```mermaid
+classDiagram
+    class IPhone {
+      
+    }
+    class ReprodutorMusical {
+        <<interface>>
+        + tocar()
+        + pausar()
+        + selecionarMusica(String musica)
+    }
+    class AparelhoTelefonico {
+        <<interface>>
+        + ligar(String numero)
+        + atender()
+        + iniciarCorreioVoz()
+    }
+    class NavegadorInternet {
+        <<interface>>
+        + exibirPagina(String url)
+        + adicionarNovaAba()
+        + atualizarPagina()
+    }
+    IPhone ..|> ReprodutorMusical
+    IPhone ..|> AparelhoTelefonico
+    IPhone ..|> NavegadorInternet
+```
